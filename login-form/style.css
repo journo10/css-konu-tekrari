@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    background-image: url("./img/bg_img.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(128, 128, 128, 0.3);
+    z-index: -9;
+}
+
+.container {
+    background: #ffffff;
+    max-width: 425px;
+    width: 100%;
+    max-height: 525px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.container h1 {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: inherit;
+    letter-spacing: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #800080;
+}
+
+form {
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+}
+
+.box {
+    position: relative;
+    width: 260px;
+    margin: 13px 0;
+}
+
+.box input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #800080;
+    outline: none;
+    border-radius: 5px;
+}
+
+.box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 5px;
+    text-transform: capitalize;
+    transition: all .5s;
+    background: transparent;
+    color: #800080;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -7px;
+    background-color: #ffffff;
+}
+
+form span {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-align: right;
+    color: #808080;
+}
+
+form span:hover {
+    color: #800080;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.login-btn {
+    width: 110px;
+    padding: 11px;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    background: #800080;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.login-btn:hover {
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.login-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+}
+
+.login-social p {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.login-social li {
+    font-size: 22px;
+    border: #800080 1px solid;
+    padding: 11px;
+    border-radius: 50%;
+}
+
+.login-social li a:active {
+    color: #800080;
+}
